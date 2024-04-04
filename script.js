@@ -55,13 +55,16 @@ document.getElementById('searchInput').addEventListener('keyup',event=>{
 })
 
 //sort function
+
 document.getElementById("sortMarketCapButton").addEventListener("click",()=>{
     data.sort((a,b)=>b.total_volume-a.total_volume);
     renderTable(data);
 })
 
 // sort functon2
+
 document.getElementById("sortPercentageChangeButton").addEventListener("click",()=>{
     data.sort((a,b)=>a.price_change_percentage_24h-b.price_change_percentage_24h);
     renderTable(data);
+    
 })
